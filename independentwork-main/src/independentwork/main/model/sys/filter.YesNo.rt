@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- Словарь да/нет для фильтров -->
+
+    <domain name="filter.YesNo" parent="wax.DictMemory" title="Да/Нет">
+        <dict/>
+        <dictdata>
+            <i id="0" text="Нет"/>
+            <i id="1" text="Да"/>
+        </dictdata>
+    </domain>
+
+</root>

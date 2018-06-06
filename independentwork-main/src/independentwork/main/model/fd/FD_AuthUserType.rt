@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="FD_AuthUserType" parent="FilledDict" tag.db="true"
+            tag.dataloader="true"
+            title="Тип пользователя">
+        <dict/>
+        <dictdata>
+            <i id="1" name_kz="Қолданушылар тобы" name_ru="Группа пользователей" name_en="User group" const="group" ord="1" vis="0"/>
+            <i id="2" name_kz="Қолданушы-адам" name_ru="Пользователь-человек" name_en="User to person" const="user" ord="2" vis="1"/>
+            <i id="3" name_kz="Қолданушы-жуйе" name_ru="Пользователь-система" name_en="User to system" const="system" ord="3" vis="1"/>
+        </dictdata>
+    </domain>
+
+</root>

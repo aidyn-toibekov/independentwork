@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="FD_BusProcessType" parent="FilledDict" tag.db="true"
+            tag.dataloader="true"
+            title="Тип бизнес процесса">
+        <dict/>
+        <dictdata>
+            <i id="1" name_kz="Бизнес-процесстер тобы" name_ru="Группа бизнес-процессов" name_en="Business-process group" const="group" ord="1" vis="0"/>
+            <i id="2" name_kz="Модельді өзгерту бизнес-процесі" name_ru="Бизнес-процесс изменения модели" name_en="Model change business-process" const="modelBusProcess" ord="2" vis="1"/>
+            <i id="3" name_kz="Хабарлама құру бизнес-процесі" name_ru="Бизнес-процесс формирования сообщении" name_en="Message forming business-process" const="messageBusProcess" ord="3" vis="1"/>
+        </dictdata>
+    </domain>
+
+</root>

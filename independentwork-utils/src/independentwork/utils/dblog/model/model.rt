@@ -1,0 +1,13 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-include path="*.rt" recursive="true"/>
+
+    <sqlfilter name="log.name"
+               class="independentwork.utils.dblog.model.sqlfilter.SqlFilter_log_name"/>
+
+    <!-- сервис логирования -->
+    <service name="independentwork.utils.dblog.DbLogService"
+             class="independentwork.utils.dblog.impl.DbLogServiceImpl"/>
+
+</root>

@@ -1,0 +1,12 @@
+//
+load '..'
+//
+project.name = "independentwork-mssql"
+project.package_root = "independentwork.mssql"
+//
+include "wax-module-project"
+include "localize-project"
+//
+libs = libs + ["jdbc-mssql"]
+libs_dev = libs_dev + []
+//

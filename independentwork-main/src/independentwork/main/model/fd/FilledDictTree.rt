@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!--
+        Предок для предопределенных справочников.
+
+        Для каждого справочника создается таблица.
+        Данные для справочника берутся из тега dictdata
+
+        В строке данных может быть атрибут const - это суффикс сгенерированной
+        константы в FD_Const. Префиксом константы будет имя таблицы без FD_
+
+        <domain name="FD_Dict1" parent="tofi.FilledDict" title="Заголовок1">
+            <dict/>
+            <dictdata>
+                <i id="0" name_ru="Нет"/>
+                <i id="1" name_ru="Да" const="yes"/>
+            </dictdata>
+        </domain>
+
+    -->
+    <domain name="FilledDictTree" parent="FilledDict"
+            >
+        <ref parent="field/ref.dict">
+            <js>
+                <input jsclass="CbdictTree"/>
+            </js>
+        </ref>
+
+        <dict defaultField="name"/>
+
+        <field name="parent" parent="long"/>
+        <field name="name" parent="f.name"/>
+        <field name="fullName" parent="f.fullName"/>
+        <field name="ord" parent="f.ord" title="Порядковый номер"></field>
+        <field name="vis" parent="int" title="Видимый"></field>
+
+        <dao name="tree" class="independentwork.main.model.fd.WaxLoadDictTreeDao"/>
+
+        <dataloader name="dictdata" dbdata="prod"
+                    class="independentwork.main.model.fd.FilledDictTreeDataLoader"/>
+    </domain>
+
+
+</root>

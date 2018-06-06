@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <row id="1001" name_ru="Преподаватели" fullName_ru="Преподаватели"
+         cmt_ru="Роль для Преподавателей"/>
+    <row id="1002" name_ru="Обучаемые" fullName_ru="Обучаемые"
+         cmt_ru="Роль для Обучаемыех"/>
+</root>

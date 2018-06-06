@@ -1,0 +1,12 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-include path="*.rt" recursive="true"/>
+
+    <x-dbdata path="../dbdata"/>
+
+    <!-- сервис -->
+    <service name="independentwork.utils.dbinfo.DbInfoService"
+             class="independentwork.utils.dbinfo.impl.DbInfoServiceImpl"/>
+
+</root>

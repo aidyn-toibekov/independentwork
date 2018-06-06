@@ -1,0 +1,15 @@
+//
+load '..'
+//
+project.name = "independentwork-main"
+project.package_root = "independentwork.main"
+//
+include "wax-module-project"
+include "localize-project"
+//
+libs = libs + ["jandcode-wax-core", "jandcode-wax-verdb", "independentwork-utils",
+               "jdbc-oracle", "jdbc-mysql", "independentwork-mssql",
+               "independentwork-onlineviewer", "jandcode-bgtasks"
+               ]
+libs_dev = libs_dev + []
+//

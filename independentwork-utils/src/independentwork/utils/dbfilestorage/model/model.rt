@@ -1,0 +1,10 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-include path="*.rt" recursive="true"/>
+
+    <!-- сервис -->
+    <service name="independentwork.utils.dbfilestorage.DbFileStorageService"
+             class="independentwork.utils.dbfilestorage.impl.DbFileStorageServiceImpl"/>
+
+</root>

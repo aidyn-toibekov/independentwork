@@ -1,0 +1,18 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <service name="independentwork.main.utils.ExpAppService"
+             class="independentwork.main.utils.ExpAppService"/>
+             
+
+
+    <web>
+        <!-- для download файла из хранилища -->
+        <type name="independentwork.main.utils.FileWrapper">
+            <render name="bin"
+                    class="independentwork.main.utils.RenderBin_FileWrapper"/>
+        </type>
+    </web>
+
+
+</root>

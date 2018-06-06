@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="SubjectUser" parent="wax.Table" tag.db="true"
+            title="Преподователи предметов">
+
+        <field name="authUser" parent="AuthUser/ref"/>
+
+        <field name="subject" parent="Subject/ref"/>
+
+        <!-- =================== -->
+
+        <dao name="list" class="independentwork.main.model.subject.SubjectUser_list"/>
+        <dao name="updater" class="independentwork.main.model.subject.SubjectUser_updater"/>
+
+    </domain>
+
+    <domain name="SubjectUser.filter" parent="SubjectUser">
+        <field name="authUser" parent="AuthUser/ref"/>
+        <field name="subject" parent="Subject/ref"/>
+    </domain>
+
+</root>

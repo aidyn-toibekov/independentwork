@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <row id="1001" job="1001" executor="1004" fileStorage="1008"
+         fileName="rel_dependant.png"/>
+    <row id="1003" job="1001" executor="3006"/>
+</root>

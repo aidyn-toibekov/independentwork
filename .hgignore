@@ -9,11 +9,10 @@ Thumbs.db
 *.pyc
 *.pyo
 _product
-datadir
 -TEMPLATE
 temp
 out
-.hg
+datadir
 
 syntax: regexp
 ^_

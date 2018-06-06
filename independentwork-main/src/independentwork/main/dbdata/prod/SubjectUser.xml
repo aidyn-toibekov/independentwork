@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <row id="1001" authUser="1003" subject="1001"/>
+    <row id="1002" authUser="1003" subject="1002"/>
+    <row id="1003" authUser="1003" subject="1003"/>
+    <row id="1004" authUser="2005" subject="1002"/>
+</root>

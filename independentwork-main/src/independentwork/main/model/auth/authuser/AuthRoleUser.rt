@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="AuthRoleUser" parent="wax.Table" tag.db="true"
+            title="Роли пользователей" kind="Роли пользователей" history="true">
+
+        <field name="authRole" parent="AuthRole/ref">
+        </field>
+
+        <field name="authUser" parent="AuthUser/ref">
+        </field>
+
+        <field name="ord" parent="f.ord">
+            <!--
+            Приоритет роли для пользователя
+            -->
+        </field>
+
+        <!-- =================== -->
+
+        <dao name="updater" class="independentwork.main.model.auth.authuser.AuthRoleUser_updater"/>
+
+    </domain>
+
+</root>

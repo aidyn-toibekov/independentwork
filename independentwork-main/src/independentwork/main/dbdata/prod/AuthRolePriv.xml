@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <row id="1001" authRole="1001" permis="platform-spr"/>
+    <row id="1002" authRole="1001" permis="subject"/>
+    <row id="1003" authRole="1001" permis="upd:subject"/>
+    <row id="1004" authRole="1001" permis="teacher"/>
+    <row id="1005" authRole="1001" permis="upd:teacher"/>
+    <row id="1006" authRole="1001" permis="learner"/>
+    <row id="1007" authRole="1001" permis="add:learner"/>
+    <row id="1008" authRole="1001" permis="upd:learner"/>
+    <row id="1009" authRole="1001" permis="del:learner"/>
+    <row id="1010" authRole="1001" permis="platform-jobs"/>
+    <row id="1011" authRole="1001" permis="assignment-job"/>
+    <row id="1012" authRole="1001" permis="add:assignment-job"/>
+    <row id="1013" authRole="1001" permis="upd:assignment-job"/>
+    <row id="1014" authRole="1001" permis="del:assignment-job"/>
+    <row id="1015" authRole="1001" permis="view:assignment-job"/>
+    <row id="1016" authRole="1001" permis="add:assignment-job-executor"/>
+    <row id="1017" authRole="1001" permis="upd:assignment-job-executor"/>
+    <row id="1018" authRole="1001" permis="del:assignment-job-executor"/>
+    <row id="1019" authRole="1002" permis="platform-spr"/>
+    <row id="1020" authRole="1002" permis="subject"/>
+    <row id="1021" authRole="1002" permis="teacher"/>
+    <row id="1022" authRole="1002" permis="learner"/>
+    <row id="1023" authRole="1002" permis="upd:learner"/>
+    <row id="1024" authRole="1002" permis="platform-jobs"/>
+    <row id="1025" authRole="1002" permis="сompleting-job"/>
+</root>

@@ -1,0 +1,8 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <auth>
+        <autologin username="sysadmin" password="111"/>
+    </auth>
+
+</root>

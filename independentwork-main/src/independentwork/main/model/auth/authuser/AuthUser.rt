@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="AuthUser" parent="wax.Table" tag.db="true"
+            title="Пользователи">
+
+
+        <!-- это словарь -->
+        <x-include rtpath="mixin/exp.DictEntity"/>
+        
+        <dict resolve="true" domain="AuthUser.dict" defaultField="name"/>
+
+        <field name="name" parent="f.name">
+        </field>
+
+        <field name="fullName" parent="f.fullName">
+        </field>
+
+        <field name="login" parent="string" size="32"
+               title="Логин">
+            <validator name="unique"/>
+        </field>
+
+        <field name="passwd" parent="password" size="64"
+               title="Пароль">
+        </field>
+
+        <field name="locked" parent="boolean"
+               title="Заблокирован">
+            <!--@
+                Признак блокировки пользователя.
+            -->
+        </field>
+
+        <field name="authUserType" parent="FD_AuthUserType/ref"/>
+
+        <field name="authUserRole" parent="FD_AuthUserRole/ref"/>
+
+
+        <field name="parent" parent="AuthUser/ref">
+            <!--@
+                Ссылка на группу
+            -->
+        </field>
+
+        <field name="email" parent="string" size="32" title="Электронная почта">
+        </field>
+
+        <field name="phoneNumber" parent="string" size="32" title="Телефон">
+        </field>
+
+        <!-- =================== -->
+
+        <dao name="auth" class="independentwork.main.model.auth.authuser.AuthUser_auth"/>
+        <dao name="list" class="independentwork.main.model.auth.authuser.AuthUser_list"/>
+        <dao name="updater" class="independentwork.main.model.auth.authuser.AuthUser_updater"
+             domain="AuthUser.edit"/>
+        <dao name="dict" class="independentwork.main.model.auth.authuser.AuthUser_dict"/>
+        <dao name="util" class="independentwork.main.model.auth.authuser.AuthUser_util"/>
+        <dao name="tree" class="independentwork.main.model.auth.authuser.AuthUser_tree"/>
+        <dao name="priv" class="independentwork.main.model.auth.authuser.AuthUser_priv"/>
+
+    </domain>
+
+    <!-- ===================================================================== -->
+
+    <domain name="AuthUser.list" parent="AuthUser">
+        <!--
+            Для показа записей клиенту
+        -->
+        <field name="passwd" parent="null"/>
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUser.edit" parent="AuthUser">
+        <!--
+            Для редактирования записи пользователя.
+        -->
+        <field name="passwd2" parent="AuthUser/passwd"
+               title="Подтверждение пароля"/>
+
+        <field name="roles" parent="string"/>
+
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUser.dict" parent="id">
+        <!--
+            Структура словаря пользователей
+        -->
+        <field name="name" parent="AuthUser/name"/>
+        <field name="fullName" parent="AuthUser/fullName"/>
+
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUser.roletree" parent="id">
+        <!--
+            дерево ролей
+        -->
+        <field name="parent" parent="long"/>
+        <x-include rtpath="mixin/tree.fields"/>
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUser.tree" parent="AuthUser">
+        <x-include rtpath="mixin/tree.fields"/>
+
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUser.privtree" parent="id">
+        <!-- дерево привелегий  с учетом доступа через бизнес правила-->
+        <field name="id" parent="string"/>
+        <field name="parent" parent="string"/>
+        <field name="busProcessBefore" parent="long" title="Бизнес-процесс перед"/>
+        <field name="busProcessBeforeName" parent="string" title="Бизнес-процесс перед"/>
+        <field name="busProcessAfter" parent="long" title="Бизнес-процесс после"/>
+        <field name="busProcessAfterName" parent="string" title="Бизнес-процесс после"/>
+        <field name="acceptBusProcess" parent="boolean"/>
+        <x-include rtpath="mixin/tree.fields"/>
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUser.filter" parent="AuthUser">
+        <field name="locked" title="Заблокирован" parent="filter.YesNo/ref"/>
+        <field name="authUserRole" parent="FD_AuthUserRole/ref"/>
+    </domain>
+
+</root>

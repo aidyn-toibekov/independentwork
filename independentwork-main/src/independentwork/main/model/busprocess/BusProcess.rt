@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="BusProcess" parent="wax.Table" tag.db="true"
+            title="Бизнес-процессы"
+            >
+        <!--@
+
+        -->
+
+        <!-- это словарь -->
+        <!--<x-include rtpath="mixin/tofi.DictEntity"/>-->
+
+        <field name="name" parent="f.name">
+        </field>
+
+        <field name="fullName" parent="f.fullName">
+        </field>
+
+        <field name="busProcessType" parent="FD_BusProcessType/ref" req="true"/>
+
+        <field name="parent" parent="BusProcess/ref"/>
+
+        <field name="cmt" parent="f.cmt">
+        </field>
+
+        <!-- =================== -->
+        <dao name="tree" class="independentwork.main.model.busprocess.BusProcess_tree"/>
+        <dao name="updater" class="independentwork.main.model.busprocess.BusProcess_updater"/>
+
+    </domain>
+    <!-- ===================================================================== -->
+
+
+    <domain name="BusProcess.tree" parent="BusProcess">
+        <x-include rtpath="mixin/tree.fields"/>
+
+    </domain>
+
+</root>

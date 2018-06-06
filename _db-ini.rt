@@ -1,0 +1,21 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!--
+        настройки базы данных для разработчика
+    -->
+
+    <db name="default"
+        dbdriver="mssql"
+        host="192.168.1.22"
+        database="independentwork"
+        username="sa"
+        password="1q2w3e4R"
+
+        system.database="master"
+        system.username="sa"
+        system.password="1q2w3e4R"
+    />
+
+
+</root>

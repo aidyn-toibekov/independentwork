@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="FD_ActionType" parent="FilledDict" tag.db="true"
+            tag.dataloader="true"
+            title="Тип действия">
+        <dict/>
+        <dictdata>
+            <i id="1" name_kz="Құру" name_ru="Создание" name_en="Create" const="ins" ord="1" vis="1"/>
+            <i id="2" name_kz="Өңдеу" name_ru="Исправления" name_en="Update" const="upd" ord="2" vis="1"/>
+            <i id="3" name_kz="Өшіру" name_ru="Удаления" name_en="Delete" const="del" ord="3" vis="1"/>
+        </dictdata>
+    </domain>
+
+</root>

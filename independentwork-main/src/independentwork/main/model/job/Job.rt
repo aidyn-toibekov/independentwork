@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="Job" parent="wax.Table" tag.db="true"
+            title="Задание">
+
+        <!-- это словарь -->
+        <x-include rtpath="mixin/exp.DictEntity"/>
+
+        <field name="name" parent="f.name"/>
+
+        <field name="dte" parent="date" title="Дата задания"/>
+
+        <field name="description" parent="f.htmlText" title="Описание"/>
+
+        <field name="author" parent="AuthUser/ref" title="Автор"/>
+
+        <field name="subject" parent="Subject/ref" title="Предмет"/>
+
+        <field name="fileStorage" parent="DbFileStorage/ref"/>
+
+        <field name="fileName" parent="string" size="120" title="Название файла Задания"/>
+
+        <field name="cmt" parent="f.htmlText"/>
+
+        <!-- =================== -->
+
+        <dao name="list" class="independentwork.main.model.job.Job_list"/>
+        <dao name="updater" class="independentwork.main.model.job.Job_updater" domain="Job.full"/>
+
+    </domain>
+
+    <domain name="Job.full" parent="Job">
+        <field name="fn" parent="upload" title="Файл"/>
+    </domain>
+
+    <domain name="Job.filter" parent="Job">
+        <field name="author" parent="AuthUser/ref"/>
+        <field name="subject" parent="Subject/ref"/>
+    </domain>
+
+</root>

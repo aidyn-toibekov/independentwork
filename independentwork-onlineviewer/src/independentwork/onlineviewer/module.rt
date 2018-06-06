@@ -1,0 +1,55 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-module name="independentwork.onlineviewer">
+        <depend name="jandcode.wax.core"/>
+        <depend name="independentwork.utils"/>
+        <depend name="jandcode.onlineviewer"/>
+    </x-module>
+
+    <!-- плагин модели для подключения в модель проекта -->
+    <x-plugin name="independentwork.onlineviewer.model"
+              path="model/model.rt">
+        <depend name="jandcode.wax.core.model"/>
+    </x-plugin>
+
+    <service name="jandcode.onlineviewer.OnlineviewerService">
+        <fileprovider name="filestorage"
+                      class="independentwork.onlineviewer.utils.FileStorageProvider"/>
+
+        <!-- =================== -->
+        <fileconvertor name="xml"
+                       class="independentwork.onlineviewer.utils.Text_xml"/>
+
+
+        <!-- =================== -->
+        <filetype name="xml">
+            <viewtype name="text" fileconvertor="xml"/>
+        </filetype>
+
+
+    </service>
+
+    <web>
+        <resource name="independentwork.onlineviewer" package="independentwork.onlineviewer"/>
+    </web>
+
+    <app>
+        <!-- каталог для кешированных файлов -->
+        <datadir name="onlineviewer.cache"/>
+
+        <onlineviewer>
+            <!-- exe для ghostscript 9.1.x -->
+            <ghostscript exe="D:\onlineviewer-soft\gs\bin\gswin32c.exe"/>
+            <!-- exe для libreoffice 4.x -->
+            <libreoffice exe="D:\onlineviewer-soft\openOffice\program\soffice.exe"/>
+            <!-- exe для imagemagick 6.8.x -->
+            <imagemagick exe="D:\onlineviewer-soft\ImageMagick\convert.exe"/>
+            <!-- exe для UniConvertor 1.x -->
+            <uniconvertor exe="D:\onlineviewer-soft\UniConvertor\uniconvertor.cmd"/>
+            <!-- exe для cgm2wmf 1.x -->
+            <cgm2wmf exe="D:\onlineviewer-soft\cgm2wmf\cgm2wmf.bat"/>
+        </onlineviewer>
+    </app>
+
+</root>

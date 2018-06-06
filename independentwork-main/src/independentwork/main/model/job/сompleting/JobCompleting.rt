@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="JobCompleting" parent="Job" title="Выполнения задании">
+
+
+        <!-- =================== -->
+
+        <dao name="list" class="independentwork.main.model.job.сompleting.JobСompleting_list"/>
+        <dao name="updater" class="independentwork.main.model.job.сompleting.JobCompleting_updater" domain="JobCompleting.full"/>
+
+    </domain>
+
+    <domain name="JobCompleting.full" parent="JobCompleting">
+        <field name="fn" parent="upload" title="Файл"/>
+    </domain>
+
+    <domain name="JobCompleting.filter" parent="JobCompleting">
+        <field name="executor" parent="AuthUser/ref"/>
+        <field name="author" parent="AuthUser/ref"/>
+        <field name="subject" parent="Subject/ref"/>
+    </domain>
+
+</root>

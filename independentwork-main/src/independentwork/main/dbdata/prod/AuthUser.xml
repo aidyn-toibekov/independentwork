@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <row id="1" name_ru="Администратор" fullName_ru="Администратор"
+         login="sysadmin" passwd="698D51A19D8A121CE581499D7B701668"
+         locked="false" authUserType="2" authUserRole="3"/>
+    <row id="1001" name_ru="Преподаватели" fullName_ru="Преподаватели"
+         passwd="D41D8CD98F00B204E9800998ECF8427E" authUserType="1"/>
+    <row id="1002" name_ru="Обучаемые" fullName_ru="Обучаемые"
+         passwd="D41D8CD98F00B204E9800998ECF8427E" authUserType="1"/>
+    <row id="1003" name_ru="Преподаватель 1" fullName_ru="Преподаватель 1"
+         login="teacher" passwd="698D51A19D8A121CE581499D7B701668"
+         locked="false" authUserType="2" authUserRole="2" parent="1001" email=""
+         phoneNumber=""/>
+    <row id="1004" name_ru="Обучаемый 1" fullName_ru="Обучаемый 1"
+         login="student" passwd="698D51A19D8A121CE581499D7B701668"
+         locked="false" authUserType="2" authUserRole="1" parent="1002" email=""
+         phoneNumber=""/>
+    <row id="2005" name_ru="Преподаватель 2" fullName_ru="Преподаватель 2"
+         login="teacher1" passwd="698D51A19D8A121CE581499D7B701668"
+         locked="false" authUserType="2" authUserRole="2" parent="1001" email=""
+         phoneNumber=""/>
+    <row id="3006" name_ru="Обучаемый 2" fullName_ru="Обучаемый 2"
+         login="student2" passwd="698D51A19D8A121CE581499D7B701668"
+         locked="false" authUserType="2" authUserRole="1" parent="1002" email=""
+         phoneNumber=""/>
+</root>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="Subject" parent="wax.Table" tag.db="true"
+            title="Предметы">
+
+        <!-- это словарь -->
+        <x-include rtpath="mixin/exp.DictEntity"/>
+
+        <field name="name" parent="f.name">
+        </field>
+
+        <field name="fullName" parent="f.fullName">
+        </field>
+
+        <field name="cmt" parent="f.htmlText">
+        </field>
+
+        <!-- =================== -->
+
+        <dao name="list" class="independentwork.main.model.subject.Subject_list"/>
+        <dao name="updater" class="independentwork.main.model.subject.Subject_updater"/>
+
+    </domain>
+
+</root>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="AuthUserPriv" parent="wax.Table" tag.db="true"
+            title="Привилегии пользователей"  kind="Привилегии пользователей" history="true">
+
+        <field name="authUser" parent="AuthUser/ref">
+            <!--@
+                Пользователь
+            -->
+        </field>
+
+        <field name="permis" parent="string" size="64">
+            <!--@
+                Наименование привилегии роли (встроенное наименование в систему).
+            -->
+        </field>
+
+        <field name="busProcessBefore" parent="BusProcess/ref">
+            <!--@
+                Бизнес процесс  перед
+            -->
+        </field>
+
+        <field name="busProcessAfter" parent="BusProcess/ref">
+            <!--@
+                Бизнес процесс  после
+            -->
+        </field>
+
+        <!-- =================== -->
+
+        <dao name="updater" class="independentwork.main.model.auth.authuser.AuthUserPriv_updater"/>
+
+    </domain>
+
+    <!-- =================== -->
+
+    <domain name="AuthUserPriv.busProcessName" parent="AuthUserPriv">
+        <field name="busProcessBeforeName" parent="f.name"/>
+        <field name="busProcessAfterName" parent="f.name"/>
+    </domain>
+
+</root>

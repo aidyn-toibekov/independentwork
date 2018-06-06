@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="JobExecutor" parent="wax.Table" tag.db="true"
+            title="Исполнитель Задания">
+
+        <field name="job" parent="Job/ref" req="true"/>
+
+        <field name="executor" parent="AuthUser/ref"/>
+
+        <field name="fileStorage" parent="DbFileStorage/ref"/>
+
+        <field name="fileName" parent="string" size="120" title="Название файла Ответа"/>
+
+        <dao name="list" class="independentwork.main.model.job.executor.JobExecutor_list"/>
+        <dao name="updater" class="independentwork.main.model.job.executor.JobExecutor_updater" domain="JobExecutor.full"/>
+
+    </domain>
+
+    <domain name="JobExecutor.full" parent="JobExecutor">
+        <field name="hasAnswer" parent="boolean" title="Есть ответ"/>
+        <field name="fn" parent="upload" title="Файл"/>
+    </domain>
+
+    <domain name="JobExecutor.filter" parent="JobExecutor">
+
+    </domain>
+
+
+</root>

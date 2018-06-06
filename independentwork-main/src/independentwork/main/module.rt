@@ -1,0 +1,107 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-module name="independentwork.main">
+        <depend name="jandcode.lang"/>
+        <depend name="jandcode.auth"/>
+        <depend name="jandcode.wax.core"/>
+        <depend name="jandcode.wax.verdb"/>
+        <depend name="jandcode.dbm.db.oracle"/>
+        <depend name="jandcode.dbm.db.mysql"/>
+        <depend name="independentwork.utils"/>
+        <depend name="independentwork.mssql"/>
+        <depend name="independentwork.onlineviewer"/>
+    </x-module>
+
+    <model name="sys">
+        <field name="lang.string"
+               class="independentwork.main.model.sys.LangString2Field"
+               realfield="string"/>
+        <field name="lang.memo"
+               realfield="memo"/>
+
+    </model>
+
+
+    <x-include path="utils/index.rt"/>
+    <x-include path="auth-privs.rt"/>
+
+    <web>
+        <resource name="independentwork.main" package="independentwork.main"/>
+
+        <!-- фильтр для определения контекста выполнения запроса по url -->
+        <filter name="independentwork.main.filter.ExpAppWebFilter"
+                class="independentwork.main.filter.ExpAppWebFilter" weight="-100000"/>
+
+        <!-- фильтр для аутенфикации -->
+        <filter name="independentwork.main.filter.AuthFilter"
+                class="independentwork.main.filter.AuthFilter" weight="-100"/>
+
+
+        <theme default="ide3">
+            <item name="jc-all.css">
+                <item name="exp-controls.css" path="page/css/exp-controls.css"/>
+            </item>
+
+            <ide3 parent="web/theme/ide" jsclass="Jc.theme.Ide3">
+            </ide3>
+
+
+        </theme>
+    </web>
+
+    <lang>
+        <lang name="ru" title="Русский" weight="10"/>
+        <lang name="kz" title="Казахский" weight="20"/>
+        <lang name="en" title="English" weight="30"/>
+    </lang>
+
+    <model name="exp" parent="sys" x-root="true"  exp="true" show="true">
+        <x-include plugin="jandcode.wax.core.model"/>
+        <x-include plugin="jandcode.wax.verdb.model"/>
+        <x-include plugin="independentwork.utils.dblog.model"/>
+        <x-include plugin="independentwork.utils.dbinfo.model"/>
+        <x-include plugin="independentwork.utils.dbfilestorage.model"/>
+        <x-include plugin="independentwork.onlineviewer.model"/>
+
+        <x-include path="model/model.rt"/>
+
+        <dblang>
+            <lang name="ru" weight="10"/>
+            <lang name="kz" weight="20"/>
+            <lang name="en" weight="30"/>
+        </dblang>
+
+        <db name="default"
+            parent="sys"
+            dbdriver="oracle"
+            host="ktz"
+            database="orcl"
+            username="exp"
+            password="111"
+
+            system.username="sys as sysdba"
+            system.password="orcl"
+        />
+
+        <verdb ver="0"/>
+
+
+    </model>
+
+    <dbm>
+        <registermodel name="default" model="exp"/>
+    </dbm>
+
+    <app>
+        <expapp name="platform" jsclass="Jc.platform.App"
+                title="Самостоятельная работа обучаемого" system="true"/>
+    </app>
+
+    <lang>
+        <translate name="i" file="#{path}/lang-data.xml"/>
+        <translate name="i" file="#{path}/lang-data-en.xml" lang="en"/>
+        <translate name="i" file="#{path}/lang-data-kz.xml" lang="kz"/>
+    </lang>
+
+</root>

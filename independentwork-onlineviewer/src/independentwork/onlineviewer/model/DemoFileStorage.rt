@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="DemoFileStorage" parent="wax.Table"
+            title="">
+        <!--@
+
+        -->
+
+        <field name="name" parent="string" size="400"
+               title="Имя файла">
+        </field>
+
+        <field name="dbfs" parent="DbFileStorage/ref"
+               title="Ссылка ФС">
+        </field>
+
+        <!-- =================== -->
+
+        <dao name="list"
+             class="independentwork.onlineviewer.model.DemoFileStorage_list"/>
+
+    </domain>
+
+
+</root>

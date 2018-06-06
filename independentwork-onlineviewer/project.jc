@@ -1,0 +1,12 @@
+//
+load '..'
+//
+project.name = "independentwork-onlineviewer"
+project.package_root = "independentwork.onlineviewer"
+//
+include "wax-module-project"
+include "localize-project"
+//
+libs = libs + ["jandcode-wax-core","independentwork-utils","jandcode-onlineviewer"]
+libs_dev = libs_dev + []
+//

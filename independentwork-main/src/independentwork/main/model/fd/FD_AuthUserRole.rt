@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="FD_AuthUserRole" parent="FilledDict" tag.db="true"
+            tag.dataloader="true"
+            title="Роль пользователя">
+        <dict/>
+        <dictdata>
+            <i id="1" name_kz="Үйренуші" name_ru="Обучаемый" name_en="Learned" const="learned" ord="1" vis="1"/>
+            <i id="2" name_kz="Үйретуші" name_ru="Обучающий" name_en="Teaching" const="teaching" ord="2" vis="1"/>
+            <i id="3" name_kz="Белгісіз" name_ru="Не определено" name_en="Undefined" const="undefined" ord="3" vis="1"/>
+        </dictdata>
+    </domain>
+
+</root>

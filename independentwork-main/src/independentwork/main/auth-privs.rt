@@ -1,0 +1,87 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!--
+        Дерево прав
+    -->
+
+    <auth priv="default">
+        <priv name="default">
+
+            <priv name="platform-adm" title="Администрирование">
+                <priv name="adm-user" title="Пользователи">
+                    <priv name="add:adm-user"
+                          title="Добавить пользователя"/>
+                    <priv name="update:adm-user"
+                          title="Изменить пользователя"/>
+                    <priv name="delete:adm-user"
+                          title="Удалить пользователя"/>
+                    <priv name="adm-userrole" title="Роли пользователя">
+                        <priv name="edit:adm-userrole"
+                              title="Редактировать список ролей"/>
+                    </priv>
+                    <priv name="adm-userpriv" title="Привилегии пользователя">
+                        <priv name="edit:adm-userpriv"
+                              title="Редактировать список привилегий"/>
+                    </priv>
+                </priv>
+                <priv name="adm-role" title="Роли">
+                    <priv name="add:adm-role"
+                          title="Добавить роль"/>
+                    <priv name="update:adm-role"
+                          title="Изменить роль"/>
+                    <priv name="delete:adm-role"
+                          title="Удалить роль"/>
+                    <priv name="adm-rolepriv" title="Привилегии роли">
+                        <priv name="edit:adm-rolepriv"
+                              title="Редактировать список привилегий"/>
+                    </priv>
+                </priv>
+            </priv>
+
+
+            <priv name="platform-spr" title="Справочники">
+                <priv name="subject" title="Предметы">
+                    <priv name="add:subject" title="Добавить Предметы"/>
+                    <priv name="upd:subject" title="Изменить Предметы"/>
+                    <priv name="del:subject" title="Удалить Предметы"/>
+                </priv>
+
+                <priv name="teacher" title="Преподаватели">
+                    <priv name="add:teacher" title="Добавить Преподавателя"/>
+                    <priv name="upd:teacher" title="Изменить Преподавателя"/>
+                    <priv name="del:teacher" title="Удалить Преподавателя"/>
+                </priv>
+
+                <priv name="learner" title="Обучающиеся">
+                    <priv name="add:learner" title="Добавить Преподавателя"/>
+                    <priv name="upd:learner" title="Изменить Преподавателя"/>
+                    <priv name="del:learner" title="Удалить Преподавателя"/>
+                </priv>
+            </priv>
+
+            <priv name="platform-jobs" title="Задания">
+                <priv name="assignment-job" title="Назначение задании">
+                    <priv name="add:assignment-job" title="Добавить Задание"/>
+                    <priv name="upd:assignment-job" title="Изменить Задание"/>
+                    <priv name="del:assignment-job" title="Удалить Задание"/>
+                    <priv name="view:assignment-job" title="Просмотр Файла Задании"/>
+
+                    <priv name="add:assignment-job-executor"
+                          title="Назначить исполнителя Задании"/>
+                    <priv name="upd:assignment-job-executor"
+                          title="Изменить исполнителя Задании"/>
+                    <priv name="del:assignment-job-executor"
+                          title="Удалить исполнителя Задании"/>
+                </priv>
+
+                <priv name="сompleting-job" title="Выполнение задании">
+
+                </priv>
+            </priv>
+
+        </priv>
+    </auth>
+
+
+</root>

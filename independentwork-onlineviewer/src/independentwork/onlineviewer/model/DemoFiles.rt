@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="DemoFiles" parent="wax.Table"
+            title="">
+        <!--@
+
+        -->
+
+        <field name="path" parent="string"
+               title="">
+        </field>
+
+        <!-- =================== -->
+
+        <dao name="list"
+             class="independentwork.onlineviewer.model.DemoFiles_list"/>
+
+    </domain>
+
+
+</root>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!--
+        mixin для сущностей, которые должны работать как словарь
+    -->
+
+    <mixin name="exp.DictEntity">
+        <ref parent="field/ref.dict"/>
+
+        <dict resolve="true" domain="exp.DictEntity.dict" defaultField="name"/>
+
+        <dao name="dict" class="independentwork.main.model.sys.ExpDictEntity_dict"/>
+
+    </mixin>
+
+    <!-- Домен для представления сущности как словаря. Их структуры слишком
+         большие для использования как словаря. Например поля cmt в словаре
+         вообще не нужны.
+
+         Многоязыковые поля в словаре представляются текущим языком.
+         Все словари-сущности - resolve.
+    -->
+
+    <domain name="exp.DictEntity.dict" parent="id">
+        <field name="cod" parent="string"/>
+        <field name="name" parent="lang.string"/>
+    </domain>
+
+</root>

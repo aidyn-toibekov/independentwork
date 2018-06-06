@@ -1,0 +1,7 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-include module="independentwork.mssql"/>
+    <x-include path="#{pathprop:wax.approot}/test.rt"/>
+
+</root>

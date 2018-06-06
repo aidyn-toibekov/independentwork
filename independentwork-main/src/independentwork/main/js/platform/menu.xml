@@ -1,0 +1,41 @@
+<?independentwork.utils.xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!--
+        Описание главного меню подсистемы
+    -->
+
+
+    <menu title="Администрирование" icon="admin" expanded="false" bold="true" target="platform-adm">
+
+        <action title="Пользователи" icon="user"
+                frame="js/platform/usr/authuser/authUser_list.gf" id="true" target="adm-user"/>
+
+        <action title="Роли" icon="role"
+                frame="js/platform/usr/authrole/authRole_list.gf" id="true" target="adm-role"/>
+
+    </menu>
+
+
+    <menu title="Справочники" icon="dict" expanded="false" bold="true" target="platform-spr">
+
+        <action title="Предметы" icon="tehpd"
+                frame="js/platform/subject/subject_list.gf" id="true" target="subject"/>
+
+        <action title="Преподаватели" icon="user-admin"
+                frame="js/platform/teacher/teacher_list.gf" id="true" target="teacher"/>
+
+        <action title="Обучающиеся" icon="user"
+                frame="js/platform/learner/learner_list.gf" id="true" target="learner"/>
+
+    </menu>
+
+    <menu title="Задания" icon="cabinet" expanded="false" bold="true" target="platform-jobs">
+        <action title="Назначение задании" icon="classifier"
+                frame="js/platform/job/create/job_list.gf" id="true" target="assignment-job"/>
+
+        <action title="Выполнение задании" icon="agreements"
+                frame="js/platform/job/сompleting/job_list.gf" id="true" target="сompleting-job"/>
+    </menu>
+
+</root>
